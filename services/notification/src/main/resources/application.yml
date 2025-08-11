@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: notification-service
+  config:
+    import: optional:configserver:http://localhost:8888
+  data:
+    mongodb:
+      username: "abc"
+      password: "123456"
+      host: localhost
+      port: 27018
+      database: notification
+      authentication-database: admin
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: orderGroup
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: '*'
+        spring.json.type.mapping: orderConfirmation:com.example.notification_service.kafka.order.OrderConfirmation
+server:
+  port: 8030

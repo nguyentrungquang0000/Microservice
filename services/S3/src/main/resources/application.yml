@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: s3-service
+aws:
+  accessKeyId: ${ACCESS_ID}
+  secretAccessKey: ${ACCESS_SECRET}
+  s3:
+    bucket: ${BUCKET_NAME}
+server:
+  port: 8090

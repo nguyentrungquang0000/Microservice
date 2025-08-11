@@ -1,0 +1,14 @@
+spring:
+    config:
+        import: optional:configserver:http://localhost:8888
+    application:
+        name: customer-service
+keycloak:
+    realm: test-micro
+    admin:
+        username: admin
+        password: admin
+    auth-server-url: http://localhost:9098
+    resource: micro_app
+    credentials:
+        secret: ${SECRET_KEY}
