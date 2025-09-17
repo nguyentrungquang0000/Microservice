@@ -3,6 +3,7 @@ package com.example.customer_service.Address;
 import com.example.customer_service.Address.mapper.AddressMapper;
 import com.example.customer_service.Address.modal.request.AddressRequest;
 import com.example.customer_service.Address.modal.response.AddressDTO;
+import com.example.customer_service.Address.modal.response.ApiResponse;
 import com.example.customer_service.Customer.Customer;
 import com.example.customer_service.Customer.CustomerRepository;
 import lombok.RequiredArgsConstructor;
@@ -38,10 +39,10 @@ public class AddressService {
         return ResponseEntity.ok("Xoá thành công!");
     }
 
-    public ResponseEntity<Object> getAddressAll(String userId) {
-        Optional<Address> address = addressRepository.findById(userId);
+    public ResponseEntity<ApiResponse<?>> getAddressAll(String userId) {
+        List<Address> address = addressRepository.findByCustomer_Id(userId);
         List<AddressDTO> addressDTOList = address.stream().map(addressMapper::toAddressDTO).toList();
-        return ResponseEntity.ok(addressDTOList);
+        return ResponseEntity.ok(new ApiResponse<>(200, "ok", addressDTOList));
     }
 
     public AddressDTO getAddress(String addressId) {

@@ -26,5 +26,9 @@ public class CustomerController {
         return service.myInfo(userId);
     }
 
+    @GetMapping("/{customer-id}")
+    public ResponseEntity<Object> getCustomerId(@PathVariable("customer-id") String customerId) {
+        return service.getCustomerId(customerId);
+    }
 
 }

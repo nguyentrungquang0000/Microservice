@@ -81,6 +81,7 @@ public class ProductService {
                         product.getName(),
                         product.getProductOptions().getFirst().getPrice(),
                         product.getProductOptions().getLast().getPrice(),
+                        product.getCategory().getName(),
                         product.getAverageRating(),
                         product.getSoldQuantity()
                 ))

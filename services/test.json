@@ -1,0 +1,16 @@
+[
+  {
+    "content": "Sản phẩm dùng rất tốt, sẽ mua lại.",
+    "rating": 4.5,
+    "productId": "59196032-27c5-43bb-b21b-b4038328d03f",
+    "orderId": "bc12e654-9726-4b52-b705-23331b6da9f2",
+    "files": []
+  },
+  {
+    "content": "Đóng gói cẩn thận, giao hàng nhanh.",
+    "rating": 5,
+    "productId": "90f3d50b-138a-432d-bca9-1f0eec6e6be4",
+    "orderId": "bc12e654-9726-4b52-b705-23331b6da9f2",
+    "files": []
+  }
+]

@@ -17,6 +17,7 @@ public class SearchResponse {
     private String name;
     private BigDecimal priceMin;
     private BigDecimal priceMax;
+    private String category;
     private float averageRating;
     private int soldQuantity;
 }

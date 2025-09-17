@@ -109,4 +109,10 @@ public class CustomerService {
         CustomerDTO customerDTO = customerMapper.toCustomerDTO(customer);
         return ResponseEntity.ok(customerDTO);
     }
+
+    public ResponseEntity<Object> getCustomerId(String customerId) {
+        Customer customer = customerRepository.findById(customerId).orElseThrow();
+        CustomerDTO customerDTO = customerMapper.toCustomerDTO(customer);
+        return ResponseEntity.ok(customerDTO);
+    }
 }

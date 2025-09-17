@@ -62,7 +62,7 @@ public class JwtAuthFilter implements GlobalFilter, Ordered {
 
     @Override
     public int getOrder() {
-        return -1; // ưu tiên chạy sớm
+        return -1;
     }
 }
 

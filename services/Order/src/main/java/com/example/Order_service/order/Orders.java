@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.CreatedDate;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
 
@@ -22,8 +23,7 @@ public class Orders {
     private String id;
 
     private BigDecimal amount;
-    @CreatedDate
-    private Date createdAt;
+    private LocalDateTime createdAt;
     @Enumerated(EnumType.STRING)
     private OrderStatus status;
     private String method;
@@ -35,6 +35,7 @@ public class Orders {
     private String address;
     private String name;
     private String description;
+    private LocalDateTime deliveredAt;
     @OneToMany(mappedBy = "order", cascade = CascadeType.REMOVE)
     private List<OrderItem> orderItems;
 }

@@ -23,7 +23,7 @@ public class ProductOptionService {
                 .stock(productOption.getStock())
                 .productId(productOption.getProduct().getId())
                 .productName(productOption.getProduct().getName())
-                .productUrl("")
+                .productUrl(productOption.getProduct().getProductFiles().getFirst().getFileUrl())
                 .build();
     }
 }

@@ -19,11 +19,12 @@ public class AddressMapper {
 
     public AddressDTO toAddressDTO(Address address) {
         AddressDTO addressDTO = new AddressDTO();
+        addressDTO.setId(address.getId());
         addressDTO.setName(address.getName());
         addressDTO.setPhone(address.getPhone());
         addressDTO.setCity(address.getCity());
         addressDTO.setWard(address.getWard());
-        addressDTO.setAddress(address.getAddress());
+        addressDTO.setStreetAddress(address.getAddress());
         addressDTO.setCustomerId(address.getCustomer().getId());
         return addressDTO;
     }

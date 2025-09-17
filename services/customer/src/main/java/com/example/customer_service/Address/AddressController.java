@@ -2,6 +2,7 @@ package com.example.customer_service.Address;
 
 import com.example.customer_service.Address.modal.request.AddressRequest;
 import com.example.customer_service.Address.modal.response.AddressDTO;
+import com.example.customer_service.Address.modal.response.ApiResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -23,8 +24,8 @@ public class AddressController {
         return service.deleteAddress(addressId);
     }
 
-    @GetMapping("/all")
-    public ResponseEntity<Object> getAddressAll(@RequestHeader("X-User-Id") String userId) {
+    @GetMapping()
+    public ResponseEntity<ApiResponse<?>> getAddressAll(@RequestHeader("X-User-Id") String userId) {
         return service.getAddressAll(userId);
     }
 

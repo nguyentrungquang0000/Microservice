@@ -15,6 +15,6 @@ public class AddressDTO {
     private String phone;
     private String city;
     private String ward;
-    private String address;
+    private String streetAddress;
     private String customerId;
 }
